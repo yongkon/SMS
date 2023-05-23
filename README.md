@@ -1,32 +1,36 @@
-School Management System
+<h2>School Management System</h2>
 
-1: Tables
-Table 1 – Student table:
+<h3>1: Tables </h3>
+<h3>Table 1 – Student table:</h3>
+
 |Datatype    |  Name    |  Description  |
 |:------|:---|:---|
 |varchar(50) not null (PK) | email | Student’s current school email, unique student identifier |
 |varchar(50) not null | name | The full name of the student |
 |varchar(50) not null | password | Student’s password in order to log in |
 
-Table 2 – Course table:
+<h3>Table 2 – Course table:</h3>
+
 |Datatype    |  Name    |  Description  |
 |:------|:---|:---|
 |int not null (PK) | id | Unique Course Identifier |
 |varchar(50) not null | name | Provides the name of the course |
 |varchar(50) not null | Instructor | Provides the name of the instructor |
 
-Requirement 2: Data Access Object (DAO)
-  StudentDAO (Interface)
+<h3>Requirement 2: Data Access Object (DAO) </h3>
+<pre>
+<h4>  StudentDAO (Interface) </h4>
   ● getAllStudents();
   ● getStudentByEmail();
   ● validateStudent();
   ● registerStudentToCourse();
   ● getStudentCourses();
-  
-  CourseDAO (Interface)
+ <h4>   CourseDAO (Interface) </h4>
   ● getAllCourses();
-  
+</pre>
+
   StudentService and CourseService which implements the respective DAOs
+  
  | No. | Return Type | Class Name | Method Name | Input Parameters |
  |--|------------|------------|-------------|-------------------|
  | 1 | List<Student> | StudentService | getAllStudents <br> –This method reads the student table in your database and returns the data as a List<Student> | None |
